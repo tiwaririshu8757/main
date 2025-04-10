@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:voting/Ai/ai.dart';
 import 'package:voting/Drawer/Eci.dart';
 import 'package:voting/Drawer/Result.dart';
 import 'package:voting/Home/Constiquency.dart';
@@ -90,8 +91,10 @@ class Home extends StatelessWidget {
                   )),
               ListTile(
                   leading: Icon(Icons.arrow_forward_ios_outlined, color: Colors.white),
-                  title: ElevatedButton(onPressed: () {}, child:
-                  Text("User Manual", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white)), style:
+                  title: ElevatedButton(onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Aii()));
+                  }, child:
+                  Text("Ai", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white)), style:
                   ElevatedButton.styleFrom(backgroundColor: Colors.lightBlue,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
                   )),
