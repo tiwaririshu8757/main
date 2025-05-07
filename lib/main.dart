@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:voting/Ai/ai.dart';
 import 'package:voting/Drawer/Eci.dart';
@@ -19,6 +20,8 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
+
+
   runApp(const MyApp());
 }
 
@@ -34,7 +37,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home:Aii(),//AuthWrapper(),
+      home:Splash(),//AuthWrapper(),
     );
   }
 }

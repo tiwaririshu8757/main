@@ -31,11 +31,11 @@ class Login extends StatelessWidget {
         children: [
 
           SizedBox(height: 8,),
-          Center(child: SizedBox(height:140,child: Image.asset("assets/images/FOURLION.png",fit: BoxFit.cover,))),
+          Center(child: SizedBox(height:123,child: Image.asset("assets/images/FOURLION.png",fit: BoxFit.cover,))),
           SizedBox(height: 12,),
-          Text("GOVERNMENT ",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.red),),
-          Text("OF",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.red),),
-          Text("INDIA",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.red),),
+          Text("GOVERNMENT ",style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold,color: Colors.red),),
+          Text("OF",style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold,color: Colors.red),),
+          Text("INDIA",style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold,color: Colors.red),),
           SizedBox(height: 1,),
           Padding(
             padding: const EdgeInsets.only(right: 310),
@@ -51,7 +51,7 @@ class Login extends StatelessWidget {
 
 
               )),
-          SizedBox(height: 3.1,),
+          SizedBox(height: 2.1,),
           Padding(
             padding: const EdgeInsets.only(right: 310),
             child: Text("Password",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16,color: Colors.blue),),

@@ -26,10 +26,10 @@ class Result extends StatelessWidget {
           children: [
             Text(
               'Selected Candidate: $selectedCandidate',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 20),
-            Image.asset(selectedImage, height: 100, fit: BoxFit.cover),
+            Image.asset(selectedImage, height: 180, fit: BoxFit.cover),
           ],
         ),
       ),

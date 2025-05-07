@@ -60,13 +60,13 @@ class Home extends StatelessWidget {
                               backgroundImage: AssetImage("assets/images/kk.png"),
                             ),
                             SizedBox(width: 10),
-                            Text(userData['fullname'] ?? "No Name", style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Color(0xff8B0000)),),
+                            Text(userData['fullname'] ?? "No Name", style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: Color(0xff8B0000)),),
                           ],
                         ),
                         SizedBox(height: 10),
-                        Text("ID:${userData['voterId'] ?? 'N/A'}"),
-                        Text("Aadhar No.:${userData['aadhar'] ?? 'N/A'}"),
-                        Text("Mob.:${userData['mobile'] ?? 'N/A'}"),
+                        Text("ID:${userData['voterId'] ?? 'N/A'}",style: TextStyle(fontSize: 9),),
+                        Text("Aadhar No.:${userData['aadhar'] ?? 'N/A'}",style: TextStyle(fontSize: 10),),
+                        Text("Mob.:${userData['mobile'] ?? 'N/A'}",style: TextStyle(fontSize: 9),),
                       ],
                     );
                   },
@@ -139,11 +139,7 @@ class Home extends StatelessWidget {
           ),
         ),
         body:
-        Container(decoration: BoxDecoration(gradient: LinearGradient(colors: [
-          Color(0xffFf9933), Color(0xffE1D9D1), Color(0xff00cc00)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          stops: [0.0, 0.5, 1.0],),), child: Column(children: [
+        Container(decoration: BoxDecoration(color: Color(0xff00008b)), child: Column(children: [
           SizedBox(height: 10,),
           HorizontalListView(
             crossAxisCount: 1, crossAxisSpacing: 0.0, children: [
@@ -198,7 +194,7 @@ class Home extends StatelessWidget {
           SizedBox(height: 40,),
           Center(child: Text("MADE IN INDIA", style: TextStyle(fontSize: 28,
               fontWeight: FontWeight.bold,
-              color: Color(0xff00008b)),)),
+              color: Color(0xffFFFFFF)),)),
         ]),
         )
     );

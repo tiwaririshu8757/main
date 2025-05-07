@@ -25,9 +25,9 @@ Widget build(BuildContext context) {
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => Votting()));
             },
-            child: Text("Submit"),
+            child: Text("Submit",style: TextStyle(color: Colors.white),),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.lightBlue.shade100,
+              backgroundColor: Color(0xff00008b),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             ),
           ),
@@ -42,9 +42,9 @@ Widget build(BuildContext context) {
 
               );
             },
-            child: Text("Read"),
+            child: Text("Read",style: TextStyle(color: Colors.white),),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.lightBlue.shade100,
+              backgroundColor: Color(0xff00008b),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
             ),
           ),

@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:voting/Authwraper/auth.dart';
 import 'package:voting/Login/Login.dart';
 
 class Splash extends StatefulWidget{
@@ -16,7 +17,7 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 4),(){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Login()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>AuthWrapper()));
     });
   }
   Widget build(BuildContext context) {

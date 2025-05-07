@@ -15,13 +15,13 @@ class Voting extends StatelessWidget{
     User? user = _auth.currentUser;
 
     return Scaffold(
-      appBar: AppBar(title: Text("Voting",style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold,color: Colors.white),),backgroundColor: Color(0xff00008b),iconTheme: IconThemeData(color: Colors.white),),
-      backgroundColor: Color(0xff00cc00),
+      appBar: AppBar(title: Text(" E-Voting",style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold,color: Colors.white),),backgroundColor: Color(0xff00008b),iconTheme: IconThemeData(color: Colors.white),centerTitle: true,),
+      backgroundColor: Color(0xffFFFFFF),
       body: Column(mainAxisAlignment: MainAxisAlignment.start,
         children: [
         SizedBox(height: 60,),
         Container(
-          color: Color(0xff1EBEA5),height: 310, width: 500,
+          color: Color(0xff00008b),height: 310, width: 500,
     child: FutureBuilder<DocumentSnapshot>(
     future: _firestore.collection('users').doc(user?.uid).get(),
     builder: (context, snapshot) {
@@ -40,9 +40,9 @@ class Voting extends StatelessWidget{
           Text(userData['fullname'] ?? "No Name", style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Color(0xffFFFFFF)),),
           SizedBox(height: 10,),
           Text("ID:${userData['voterId'] ?? 'N/A'}",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xffFFFFFF)),),
-          Text("Aadhar No.:${userData['aadhar'] ?? 'N/A'}",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xffFFFFFF)),),
-          Text("Mob.:${userData['mobile'] ?? 'N/A'}",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xffFFFFFF)),),
-          Text("E-mail:${userData['email'] ?? 'N/A'}",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Color(0xffFFFFFF)),),
+          Text("Aadhar No.:${userData['aadhar'] ?? 'N/A'}",style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xffFFFFFF)),),
+          Text("Mob.:${userData['mobile'] ?? 'N/A'}",style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xffFFFFFF)),),
+          Text("E-mail:${userData['email'] ?? 'N/A'}",style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xffFFFFFF)),),
 
         ],);
     }
@@ -53,7 +53,7 @@ class Voting extends StatelessWidget{
         SizedBox(height: 10,),
         TextButton(onPressed: (){
           return _openbutton(context);
-        }, child: Text("E-Voting",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+        }, child: Text("Vote",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
         style: ElevatedButton.styleFrom(backgroundColor: Color(0xff00008b),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),),
     ],),
