@@ -24,8 +24,8 @@ class _SplashState extends State<Splash> {
     return Scaffold(
       backgroundColor: Color(0xff00008b),
       body:Center(child: Container(height: 150,width: 130,
-        child: Hero(tag: 'background', child: Image.asset("assets/images/vote2.jpg",fit: BoxFit.cover,),))),
-      
+          child: Hero(tag: 'background', child: Image.asset("assets/images/vote2.jpg",fit: BoxFit.cover,),))),
+
     );
 
   }

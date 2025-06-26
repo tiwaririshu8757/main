@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:voting/Ai/ai.dart';
+import 'package:voting/Drawer/About%20dev..dart';
 import 'package:voting/Drawer/Eci.dart';
 import 'package:voting/Drawer/Result.dart';
+import 'package:voting/Drawer/voteredu.dart';
 import 'package:voting/Home/Constiquency.dart';
 import 'package:voting/Home/Voting.dart';
 import 'package:voting/Home/REsult.dart';
@@ -22,7 +24,7 @@ class Home extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text("Home", style: TextStyle(color: Colors.white),),
+          title: Text("DashBoard", style: TextStyle(color: Colors.white),),
           centerTitle: true,
           backgroundColor: Color(0xff00008b),
           iconTheme: IconThemeData(color: Colors.white),),
@@ -64,9 +66,9 @@ class Home extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height: 10),
-                        Text("ID:${userData['voterId'] ?? 'N/A'}",style: TextStyle(fontSize: 9),),
-                        Text("Aadhar No.:${userData['aadhar'] ?? 'N/A'}",style: TextStyle(fontSize: 10),),
-                        Text("Mob.:${userData['mobile'] ?? 'N/A'}",style: TextStyle(fontSize: 9),),
+                        Text("ID:${userData['voterId'] ?? 'N/A'}",style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold,color: Color(0xff00008b)),),
+                        Text("Aadhar No.:${userData['aadhar'] ?? 'N/A'}",style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold,color: Color(0xff00008b)),),
+                        Text("Mob.:${userData['mobile'] ?? 'N/A'}",style: TextStyle(fontSize: 11,fontWeight: FontWeight.bold,color: Color(0xff00008b)),),
                       ],
                     );
                   },
@@ -84,7 +86,9 @@ class Home extends StatelessWidget {
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),),),
               ListTile(
                   leading: Icon(Icons.arrow_forward_ios_outlined, color: Colors.white),
-                  title: ElevatedButton(onPressed: () {},
+                  title: ElevatedButton(onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Edu()));
+                  },
                     child:
                     Text("Voters Education", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white)), style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.lightBlue, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
@@ -130,7 +134,9 @@ class Home extends StatelessWidget {
               ListTile(
                   leading: Icon(
                       Icons.arrow_forward_ios_outlined, color: Colors.white),
-                  title: ElevatedButton(onPressed: () {}, child: Text("About Us", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white)),
+                  title: ElevatedButton(onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => About()));
+                  }, child: Text("About Us", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white)),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.lightBlue,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),

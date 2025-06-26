@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:voting/Ai/ai.dart';
+import 'package:voting/Authwraper/auth.dart';
 import 'package:voting/Drawer/Eci.dart';
 import 'package:voting/Drawer/voteredu.dart';
 import 'package:voting/Home/Hom.dart';
@@ -33,12 +34,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-      ),
-      home:Splash(),//AuthWrapper(),
-    );
+      title: 'Voting',
+
+      home:Splash(),
+      );
+
+
   }
 }
 

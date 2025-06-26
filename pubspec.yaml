@@ -41,6 +41,7 @@ dependencies:
   google_generative_ai: ^0.4.6
   font_awesome_flutter: ^10.8.0
   horizontal_list_view: ^1.1.0
+  flutter_intl: ^0.0.1    #Multi language
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:voting/Home/Hom.dart';
 
 class Result extends StatelessWidget {
   final String selectedCandidate;
@@ -30,6 +31,12 @@ class Result extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Image.asset(selectedImage, height: 180, fit: BoxFit.cover),
+            SizedBox(height: 50,),
+            Text(" ThankYou For Voting.",style: TextStyle(fontSize: 29,fontWeight: FontWeight.bold,color: Colors.blue),),
+            SizedBox(height: 30,),
+            ElevatedButton(onPressed: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Home()));
+            }, child: Text("Back to Home",style: TextStyle(fontSize: 30,color: Color(0xff000000)),),style: ElevatedButton.styleFrom(backgroundColor: Colors.red),)
           ],
         ),
       ),

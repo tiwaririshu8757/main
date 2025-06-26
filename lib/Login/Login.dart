@@ -17,10 +17,14 @@ class Login extends StatelessWidget {
       );
 
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Login Sucess !'),backgroundColor: Colors.lightGreen,),
+      );
     } catch (e) {
 
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Login failed: ${e.toString()}')),
+        SnackBar(content: Text('Login failed: ${e.toString()}'),backgroundColor: Colors.red,),
       );
     }}
   @override

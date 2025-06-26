@@ -20,9 +20,11 @@ class Eci extends StatelessWidget{
       SizedBox(height: 20,),
       Text("The Election Commission of India is a body constitutionally empowered to conduct free and fair elections to the national, the State Legislative Assemblies, State Legislative Councils and the offices of the president and vice-president. The Election Commission operates under the powers granted by Article 324 of the Constitution and subsequently enacted Representation of the People Act.The state election commissions are responsible for conducting local body elections in the respective states. The election commission decides the dates for the filing of nominations, voting, counting and announcement of results.It issues a Model Code of Conduct for political parties and candidates to ensure that the elections are conducted in a free and fair manner.",style: TextStyle(fontSize: 13,fontWeight: FontWeight.w500),),
       SizedBox(height: 10),
-      OutlinedButton(onPressed: (){
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Home()));
-      }, child: Text("Back",style: TextStyle(color: Colors.white),))
+      Container(width: 150,height: 50,color: Colors.blue,
+        child: OutlinedButton(onPressed: (){
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Home()));
+        }, child: Text("Back",style: TextStyle(color: Colors.white),)),
+      )
     ],),),
    );
   }

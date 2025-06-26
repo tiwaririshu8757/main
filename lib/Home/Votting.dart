@@ -24,6 +24,7 @@ Widget build(BuildContext context) {
           child: ElevatedButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => Votting()));
+              ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text('Voting Sucessful !!!\n Now you can Read Your vote. '),backgroundColor: Colors.lightGreen),);
             },
             child: Text("Submit",style: TextStyle(color: Colors.white),),
             style: ElevatedButton.styleFrom(

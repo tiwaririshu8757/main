@@ -39,7 +39,7 @@ class _SignUpState extends State<SignUp> {
         password.text.isEmpty||
         email.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Please fill in all fields')),
+        SnackBar(content: Text('Please fill in all fields'),backgroundColor: Colors.red,),
       );
       return;
     }
@@ -48,7 +48,7 @@ class _SignUpState extends State<SignUp> {
     // Mobile number validation
     if (mobile.text.length != 10 || !RegExp(r'^[0-9]+$').hasMatch(mobile.text)) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Mobile number must be exactly 10 digits')),
+        SnackBar(content: Text('Mobile number must be exactly 10 digits'),backgroundColor: Colors.red),
       );
       return;
     }
@@ -56,7 +56,7 @@ class _SignUpState extends State<SignUp> {
     // Aadhar number validation
     if (aadhar.text.length != 12 || !RegExp(r'^[0-9]+$').hasMatch(aadhar.text)) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Aadhar number must be exactly 12digits')),
+        SnackBar(content: Text('Aadhar number must be exactly 12digits'),backgroundColor: Colors.red),
       );
       return;
     }
@@ -64,7 +64,7 @@ class _SignUpState extends State<SignUp> {
     // Password length validation
     if (password.text.length < 9) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Password must be at least 9 characters long')),
+        SnackBar(content: Text('Password must be at least 9 characters long'),backgroundColor: Colors.red),
       );
       return;
     }
@@ -92,7 +92,7 @@ class _SignUpState extends State<SignUp> {
       );
 
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Signup successful!')),
+        SnackBar(content: Text('Signup successful !'),backgroundColor: Colors.lightGreen),
       );
     } on FirebaseAuthException catch (e) {
       String message;
@@ -107,11 +107,11 @@ class _SignUpState extends State<SignUp> {
       }
 
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(message)),
+        SnackBar(content: Text(message),backgroundColor: Colors.red),
       );
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('An unexpected error occurred.')),
+        SnackBar(content: Text('An unexpected error occurred.'),backgroundColor: Colors.red),
       );
     }
   }
