@@ -12,8 +12,6 @@ This is a Flutter-based mobile application designed to facilitate voting process
 - Offline support with local caching (optional)
 - Admin panel for managing candidates and monitoring votes (optional)
 
-## Screenshots
-*(Add screenshots of your app here)*
 
 ## Getting Started
 
